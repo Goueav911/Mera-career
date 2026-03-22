@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="google-site-verification" content="vvq4MV98zM5v90NV6AyV28H2moEfULPW2o5-J34H1Dw" />
-    <title>EC Study Hub | RGPV ECE 4th Semester</title>
+    <title>EC Study Hub | RGPV ECE 4th Semester - Complete Syllabus & PYQs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -20,19 +20,10 @@
             overflow-x: hidden;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e1e2e;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-radius: 10px;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1e1e2e; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 10px; }
 
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -53,7 +44,7 @@
             z-index: 1;
         }
 
-        /* Modern Header */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1));
             backdrop-filter: blur(10px);
@@ -94,11 +85,7 @@
             50% { transform: translateY(-20px) rotate(10deg); }
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
+        .hero-content { position: relative; z-index: 1; }
         .hero-badge {
             display: inline-block;
             background: rgba(59,130,246,0.2);
@@ -108,9 +95,7 @@
             font-weight: 500;
             margin-bottom: 20px;
             border: 1px solid rgba(59,130,246,0.4);
-            backdrop-filter: blur(5px);
         }
-
         .hero h1 {
             font-size: clamp(36px, 8vw, 64px);
             font-weight: 800;
@@ -120,7 +105,6 @@
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.02em;
         }
-
         .hero p {
             font-size: 18px;
             color: #9ca3af;
@@ -128,37 +112,18 @@
             margin-bottom: 30px;
             line-height: 1.6;
         }
+        .hero-stats { display: flex; gap: 30px; flex-wrap: wrap; }
+        .stat-item { display: flex; align-items: center; gap: 10px; }
+        .stat-item i { font-size: 24px; color: #3b82f6; }
+        .stat-item span { font-weight: 700; font-size: 18px; }
 
-        .hero-stats {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .stat-item i {
-            font-size: 24px;
-            color: #3b82f6;
-        }
-
-        .stat-item span {
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        /* Features Grid */
+        /* Features */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
         }
-
         .feature-card {
             background: rgba(30, 34, 48, 0.6);
             backdrop-filter: blur(10px);
@@ -168,13 +133,11 @@
             transition: all 0.3s;
             border: 1px solid rgba(255,255,255,0.05);
         }
-
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: rgba(59,130,246,0.5);
             box-shadow: 0 10px 30px rgba(59,130,246,0.1);
         }
-
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -185,28 +148,12 @@
             justify-content: center;
             margin: 0 auto 20px;
         }
-
-        .feature-icon i {
-            font-size: 28px;
-            color: white;
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        .feature-card p {
-            color: #9ca3af;
-            font-size: 14px;
-        }
+        .feature-icon i { font-size: 28px; color: white; }
+        .feature-card h3 { font-size: 24px; margin-bottom: 8px; }
+        .feature-card p { color: #9ca3af; font-size: 14px; }
 
         /* Section Header */
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
+        .section-header { text-align: center; margin-bottom: 40px; }
         .section-header h2 {
             font-size: clamp(28px, 5vw, 40px);
             margin-bottom: 12px;
@@ -214,19 +161,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .section-header p { color: #9ca3af; }
 
-        .section-header p {
-            color: #9ca3af;
-        }
-
-        /* Subjects Grid - Modern Cards */
+        /* Subjects Grid */
         .subjects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 25px;
             margin-bottom: 40px;
         }
-
         .subject-card {
             background: rgba(30, 34, 48, 0.8);
             backdrop-filter: blur(10px);
@@ -236,8 +179,8 @@
             border: 1px solid rgba(255,255,255,0.05);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
-
         .subject-card::before {
             content: '';
             position: absolute;
@@ -249,33 +192,25 @@
             transform: scaleX(0);
             transition: transform 0.3s;
         }
-
-        .subject-card:hover::before {
-            transform: scaleX(1);
-        }
-
+        .subject-card:hover::before { transform: scaleX(1); }
         .subject-card:hover {
             transform: translateY(-8px);
             border-color: rgba(59,130,246,0.3);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
-
         .subject-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-
         .subject-code {
             background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
-            letter-spacing: 0.5px;
         }
-
         .subject-icon {
             width: 45px;
             height: 45px;
@@ -285,32 +220,15 @@
             align-items: center;
             justify-content: center;
         }
-
-        .subject-icon i {
-            font-size: 24px;
-            color: #3b82f6;
-        }
-
-        .subject-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: #fff;
-        }
-
-        .subject-desc {
-            color: #9ca3af;
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
+        .subject-icon i { font-size: 24px; color: #3b82f6; }
+        .subject-card h3 { font-size: 22px; margin-bottom: 12px; color: #fff; }
+        .subject-desc { color: #9ca3af; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
         .subject-topics {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-bottom: 25px;
         }
-
         .topic-tag {
             background: rgba(59,130,246,0.1);
             padding: 4px 12px;
@@ -318,42 +236,129 @@
             font-size: 11px;
             color: #60a5fa;
         }
-
-        .btn-download {
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+        .btn-download, .btn-syllabus {
+            flex: 1;
             background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             color: white;
-            padding: 12px 24px;
+            padding: 12px 20px;
             border-radius: 40px;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             font-weight: 600;
-            font-size: 14px;
-            width: 100%;
+            font-size: 13px;
             border: none;
             cursor: pointer;
             transition: all 0.3s;
         }
-
+        .btn-syllabus {
+            background: transparent;
+            border: 2px solid rgba(59,130,246,0.5);
+            color: #3b82f6;
+        }
+        .btn-syllabus:hover {
+            background: rgba(59,130,246,0.1);
+            transform: scale(0.98);
+        }
         .btn-download:hover {
             transform: scale(0.98);
             box-shadow: 0 5px 20px rgba(59,130,246,0.4);
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid rgba(59,130,246,0.5);
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .modal-content {
+            max-width: 800px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 32px;
+            padding: 30px;
+            border: 1px solid rgba(59,130,246,0.3);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3b82f6;
+        }
+        .modal-header h2 {
+            font-size: 26px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+        }
+        .close-btn:hover { color: #ef4444; }
+        .unit-block {
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 18px;
+        }
+        .unit-title {
+            font-size: 18px;
+            color: #60a5fa;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .topic-list {
+            list-style: none;
+            padding-left: 25px;
+        }
+        .topic-list li {
+            margin: 6px 0;
+            padding-left: 18px;
+            position: relative;
+            color: #cbd5e1;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        .topic-list li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
             color: #3b82f6;
         }
-
-        .btn-outline:hover {
-            background: rgba(59,130,246,0.1);
-            transform: scale(0.98);
+        .modal-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
         }
 
-        /* Syllabus Section */
+        /* Syllabus Wrapper */
         .syllabus-wrapper {
             background: linear-gradient(135deg, rgba(59,130,246,0.05), rgba(139,92,246,0.05));
             border-radius: 32px;
@@ -361,14 +366,12 @@
             margin-bottom: 40px;
             border: 1px solid rgba(59,130,246,0.2);
         }
-
         .syllabus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
-
         .syllabus-item {
             background: rgba(30, 34, 48, 0.6);
             border-radius: 20px;
@@ -377,30 +380,17 @@
             align-items: center;
             gap: 15px;
             transition: all 0.3s;
+            cursor: pointer;
         }
-
         .syllabus-item:hover {
             background: rgba(59,130,246,0.1);
             transform: translateX(5px);
         }
+        .syllabus-item i { font-size: 28px; color: #3b82f6; }
+        .syllabus-item strong { display: block; font-size: 16px; margin-bottom: 4px; }
+        .syllabus-item p { font-size: 13px; color: #9ca3af; }
 
-        .syllabus-item i {
-            font-size: 28px;
-            color: #3b82f6;
-        }
-
-        .syllabus-item strong {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-
-        .syllabus-item p {
-            font-size: 13px;
-            color: #9ca3af;
-        }
-
-        /* CTA Section */
+        /* CTA */
         .cta-section {
             background: linear-gradient(135deg, #1e1e2e, #2a2a3a);
             border-radius: 32px;
@@ -408,16 +398,8 @@
             text-align: center;
             margin-bottom: 40px;
         }
-
-        .cta-section h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .cta-section p {
-            color: #9ca3af;
-            margin-bottom: 25px;
-        }
+        .cta-section h3 { font-size: 28px; margin-bottom: 15px; }
+        .cta-section p { color: #9ca3af; margin-bottom: 25px; }
 
         /* Footer */
         .footer {
@@ -428,7 +410,6 @@
             text-align: center;
             border: 1px solid rgba(255,255,255,0.05);
         }
-
         .footer-content {
             display: flex;
             justify-content: space-between;
@@ -437,89 +418,38 @@
             gap: 20px;
             margin-bottom: 30px;
         }
-
-        .footer-logo h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .footer-logo p {
-            font-size: 12px;
-            color: #9ca3af;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #9ca3af;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #3b82f6;
-        }
-
+        .footer-logo h3 { font-size: 20px; margin-bottom: 5px; }
+        .footer-logo p { font-size: 12px; color: #9ca3af; }
+        .social-links { display: flex; gap: 15px; }
+        .social-links a { color: #9ca3af; font-size: 20px; transition: color 0.3s; }
+        .social-links a:hover { color: #3b82f6; }
         .footer-bottom {
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.05);
             font-size: 13px;
             color: #6b7280;
         }
+        .heart { color: #ec489a; animation: pulse 1.5s infinite; display: inline-block; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
 
-        .heart {
-            color: #ec489a;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            .hero {
-                padding: 40px 25px;
-            }
-            .subjects-grid {
-                grid-template-columns: 1fr;
-            }
-            .syllabus-wrapper {
-                padding: 25px;
-            }
-            .cta-section {
-                padding: 30px 20px;
-            }
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-
-        /* Loading Animation for Cards */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            .container { padding: 15px; }
+            .hero { padding: 40px 25px; }
+            .subjects-grid { grid-template-columns: 1fr; }
+            .syllabus-wrapper { padding: 25px; }
+            .cta-section { padding: 30px 20px; }
+            .footer-content { flex-direction: column; text-align: center; }
+            .btn-group { flex-direction: column; }
         }
 
         .subject-card, .feature-card, .syllabus-item {
             animation: fadeInUp 0.6s ease forwards;
             opacity: 0;
         }
-
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         .subject-card:nth-child(1) { animation-delay: 0.1s; }
         .subject-card:nth-child(2) { animation-delay: 0.2s; }
         .subject-card:nth-child(3) { animation-delay: 0.3s; }
@@ -531,273 +461,49 @@
 <body>
     <div class="bg-animation"></div>
     <div class="container">
-        <!-- Modern Hero Section -->
+        <!-- Hero Section -->
         <div class="hero">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-microchip"></i> RGPV BHOPAL · EC BRANCH
-                </div>
-                <h1>
-                    Electronics &<br>
-                    Communication Hub
-                </h1>
-                <p>Your complete resource for 4th semester previous year questions, study materials, and exam preparation guides.</p>
+                <div class="hero-badge"><i class="fas fa-microchip"></i> RGPV BHOPAL · EC BRANCH</div>
+                <h1>Electronics &<br>Communication Hub</h1>
+                <p>Complete resource for 4th semester syllabus, previous year questions, and unit-wise study materials.</p>
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <i class="fas fa-book"></i>
-                        <span>6 Subjects</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-calendar"></i>
-                        <span>2022-25 PYQs</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <span>5000+ Students</span>
-                    </div>
+                    <div class="stat-item"><i class="fas fa-book"></i><span>6 Subjects</span></div>
+                    <div class="stat-item"><i class="fas fa-layer-group"></i><span>30+ Units</span></div>
+                    <div class="stat-item"><i class="fas fa-list-ul"></i><span>200+ Topics</span></div>
                 </div>
             </div>
         </div>
 
-        <!-- Features Section -->
+        <!-- Features -->
         <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-download"></i>
-                </div>
-                <h3>Free PYQs</h3>
-                <p>Completely free access to all previous year question papers</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Updated Syllabus</h3>
-                <p>Latest RGPV curriculum with unit-wise breakdown</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>Mobile Ready</h3>
-                <p>Study anytime, anywhere with responsive design</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-infinity"></i>
-                </div>
-                <h3>Lifetime Access</h3>
-                <p>No subscriptions, no hidden fees - forever free</p>
-            </div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-download"></i></div><h3>Free PYQs</h3><p>Previous year question papers</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Unit-wise Syllabus</h3><p>Detailed topics for each unit</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-mobile-alt"></i></div><h3>Mobile Ready</h3><p>Study anywhere, anytime</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-infinity"></i></div><h3>Lifetime Access</h3><p>Forever free for students</p></div>
         </div>
 
-        <!-- PYQs Section Header -->
-        <div class="section-header">
-            <h2>📚 Semester IV Previous Year Questions</h2>
-            <p>RGPV Electronics & Communication Engineering - Complete PYQ Collection</p>
-        </div>
+        <!-- Subjects Grid -->
+        <div class="section-header"><h2>📚 Semester IV Subjects</h2><p>RGPV Electronics & Communication Engineering - Complete Syllabus</p></div>
+        <div class="subjects-grid" id="subjectsGrid"></div>
 
-        <!-- Subjects Grid - Modern Cards -->
-        <div class="subjects-grid">
-            <!-- Subject 1: Signals & Systems -->
-            <div class="subject-card">
-                <div class="subject-header">
-                    <span class="subject-code">EC-401</span>
-                    <div class="subject-icon">
-                        <i class="fas fa-waveform"></i>
-                    </div>
-                </div>
-                <h3>Signals & Systems</h3>
-                <div class="subject-desc">Analysis of continuous and discrete-time signals, Fourier transforms, Laplace and Z-transform techniques.</div>
-                <div class="subject-topics">
-                    <span class="topic-tag">Fourier Series</span>
-                    <span class="topic-tag">Laplace Transform</span>
-                    <span class="topic-tag">Z-Transform</span>
-                    <span class="topic-tag">Convolution</span>
-                </div>
-                <button class="btn-download" onclick="showComingSoon()">
-                    <i class="fas fa-download"></i> Download PYQs
-                </button>
-            </div>
-
-            <!-- Subject 2: Analog Circuits -->
-            <div class="subject-card">
-                <div class="subject-header">
-                    <span class="subject-code">EC-402</span>
-                    <div class="subject-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                </div>
-                <h3>Analog Circuits</h3>
-                <div class="subject-desc">Transistor amplifiers, feedback systems, operational amplifiers, oscillators and power amplifiers.</div>
-                <div class="subject-topics">
-                    <span class="topic-tag">BJT/FET</span>
-                    <span class="topic-tag">OP-AMP</span>
-                    <span class="topic-tag">Feedback</span>
-                    <span class="topic-tag">Oscillators</span>
-                </div>
-                <button class="btn-download" onclick="showComingSoon()">
-                    <i class="fas fa-download"></i> Download PYQs
-                </button>
-            </div>
-
-            <!-- Subject 3: Electromagnetic Field Theory -->
-            <div class="subject-card">
-                <div class="subject-header">
-                    <span class="subject-code">EC-403</span>
-                    <div class="subject-icon">
-                        <i class="fas fa-magnet"></i>
-                    </div>
-                </div>
-                <h3>Electromagnetic Field Theory</h3>
-                <div class="subject-desc">Maxwell's equations, wave propagation, transmission lines and antenna fundamentals.</div>
-                <div class="subject-topics">
-                    <span class="topic-tag">Maxwell's Eq</span>
-                    <span class="topic-tag">Wave Propagation</span>
-                    <span class="topic-tag">Transmission Lines</span>
-                </div>
-                <button class="btn-download" onclick="showComingSoon()">
-                    <i class="fas fa-download"></i> Download PYQs
-                </button>
-            </div>
-
-            <!-- Subject 4: Digital Electronics -->
-            <div class="subject-card">
-                <div class="subject-header">
-                    <span class="subject-code">EC-404</span>
-                    <div class="subject-icon">
-                        <i class="fas fa-digital-tiling"></i>
-                    </div>
-                </div>
-                <h3>Digital Electronics</h3>
-                <div class="subject-desc">Logic gates, flip-flops, counters, registers, ADC/DAC and memory systems.</div>
-                <div class="subject-topics">
-                    <span class="topic-tag">Logic Gates</span>
-                    <span class="topic-tag">Flip-Flops</span>
-                    <span class="topic-tag">Counters</span>
-                    <span class="topic-tag">ADC/DAC</span>
-                </div>
-                <button class="btn-download" onclick="showComingSoon()">
-                    <i class="fas fa-download"></i> Download PYQs
-                </button>
-            </div>
-
-            <!-- Subject 5: Control Systems -->
-            <div class="subject-card">
-                <div class="subject-header">
-                    <span class="subject-code">EC-405</span>
-                    <div class="subject-icon">
-                        <i class="fas fa-sliders-h"></i>
-                    </div>
-                </div>
-                <h3>Control Systems</h3>
-                <div class="subject-desc">Transfer functions, stability analysis, root locus, Bode plots and state space analysis.</div>
-                <div class="subject-topics">
-                    <span class="topic-tag">Root Locus</span>
-                    <span class="topic-tag">Bode Plot</span>
-                    <span class="topic-tag">Stability</span>
-                    <span class="topic-tag">State Space</span>
-                </div>
-                <button class="btn-download" onclick="showComingSoon()">
-                    <i class="fas fa-download"></i> Download PYQs
-                </button>
-            </div>
-
-            <!-- Subject 6: Electrical Machines & Drives -->
-            <div class="subject-card">
-                <div class="subject-header">
-                    <span class="subject-code">EC-406</span>
-                    <div class="subject-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                </div>
-                <h3>Electrical Machines & Drives</h3>
-                <div class="subject-desc">DC machines, transformers, induction motors, synchronous machines and motor drives.</div>
-                <div class="subject-topics">
-                    <span class="topic-tag">DC Machines</span>
-                    <span class="topic-tag">Transformers</span>
-                    <span class="topic-tag">Induction Motors</span>
-                    <span class="topic-tag">Drives</span>
-                </div>
-                <button class="btn-download" onclick="showComingSoon()">
-                    <i class="fas fa-download"></i> Download PYQs
-                </button>
-            </div>
-        </div>
-
-        <!-- Syllabus Section -->
+        <!-- Syllabus Quick View -->
         <div class="syllabus-wrapper">
-            <div class="section-header">
-                <h2>📖 Complete Syllabus Overview</h2>
-                <p>RGPV EC 4th Semester - Unit wise breakdown</p>
-            </div>
-            <div class="syllabus-grid">
-                <div class="syllabus-item">
-                    <i class="fas fa-chart-line"></i>
-                    <div>
-                        <strong>Signals & Systems</strong>
-                        <p>Fourier, Laplace, Z-transform, Sampling theorem</p>
-                    </div>
-                </div>
-                <div class="syllabus-item">
-                    <i class="fas fa-microchip"></i>
-                    <div>
-                        <strong>Analog Circuits</strong>
-                        <p>Amplifiers, OP-AMP, Feedback, Oscillators</p>
-                    </div>
-                </div>
-                <div class="syllabus-item">
-                    <i class="fas fa-magnet"></i>
-                    <div>
-                        <strong>EMFT</strong>
-                        <p>Maxwell's equations, Waveguides, Antennas</p>
-                    </div>
-                </div>
-                <div class="syllabus-item">
-                    <i class="fas fa-digital-tiling"></i>
-                    <div>
-                        <strong>Digital Electronics</strong>
-                        <p>Sequential circuits, Counters, Memories</p>
-                    </div>
-                </div>
-                <div class="syllabus-item">
-                    <i class="fas fa-sliders-h"></i>
-                    <div>
-                        <strong>Control Systems</strong>
-                        <p>Time/Frequency response, Stability, Compensators</p>
-                    </div>
-                </div>
-                <div class="syllabus-item">
-                    <i class="fas fa-industry"></i>
-                    <div>
-                        <strong>Electrical Machines</strong>
-                        <p>DC/AC motors, Transformers, Speed control</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <button class="btn-download btn-outline" onclick="showSyllabus()" style="width: auto; padding: 12px 30px;">
-                    <i class="fas fa-eye"></i> View Detailed Syllabus PDF
-                </button>
-            </div>
+            <div class="section-header"><h2>📖 Quick Syllabus Overview</h2><p>Click on any subject to view complete unit-wise syllabus</p></div>
+            <div class="syllabus-grid" id="syllabusQuickGrid"></div>
         </div>
 
-        <!-- CTA Section -->
+        <!-- CTA -->
         <div class="cta-section">
             <h3>🚀 Start Your Exam Preparation Today</h3>
-            <p>Get access to high-quality PYQs, notes, and study materials designed specifically for EC students</p>
-            <button class="btn-download" onclick="showComingSoon()" style="width: auto; padding: 14px 35px;">
-                <i class="fas fa-rocket"></i> Get All PYQs Now
-            </button>
+            <p>Get access to high-quality PYQs, notes, and study materials designed for EC students</p>
+            <button class="btn-download" onclick="showComingSoon()" style="width: auto; padding: 14px 35px;"><i class="fas fa-rocket"></i> Get All PYQs Now</button>
         </div>
 
         <!-- Footer -->
         <div class="footer">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <h3><i class="fas fa-microchip"></i> EC Study Hub</h3>
-                    <p>Empowering Electronics Engineers</p>
-                </div>
+                <div class="footer-logo"><h3><i class="fas fa-microchip"></i> EC Study Hub</h3><p>Empowering Electronics Engineers</p></div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -807,56 +513,151 @@
             </div>
             <div class="footer-bottom">
                 <p>Made with <i class="fas fa-heart heart"></i> for RGPV Electronics & Communication Engineers</p>
-                <p style="margin-top: 10px;">📧 gauravkosti911@gmail.com | 📅 Updated: March 2026</p>
-                <p style="margin-top: 8px; font-size: 11px;">© 2026 EC Study Hub - All resources are free for educational purposes</p>
+                <p>📧 gauravkosti911@gmail.com | 📅 Updated: March 2026</p>
+                <p>© 2026 EC Study Hub - All resources are free for educational purposes</p>
             </div>
         </div>
     </div>
 
+    <!-- Modal -->
+    <div id="syllabusModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalBody"></div>
+            <button class="modal-btn" onclick="showComingSoon()"><i class="fas fa-download"></i> Download PYQs (Coming Soon)</button>
+        </div>
+    </div>
+
     <script>
+        // Complete Syllabus Data with Unit-wise Topics
+        const subjects = {
+            "EC-401": { name: "Signals & Systems", icon: "fa-waveform", color: "#3b82f6", topics: ["Fourier Series", "Laplace Transform", "Z-Transform", "Convolution"],
+                units: [
+                    { title: "Unit 1: Introduction to Signals", topics: ["Definition & Classification of Signals", "Continuous & Discrete Time Signals", "Even/Odd, Periodic/Aperiodic Signals", "Standard Signals - Impulse, Step, Ramp", "Operations on Signals", "System Properties - Linearity, Causality, Stability"] },
+                    { title: "Unit 2: Linear Time-Invariant Systems", topics: ["Impulse Response Representation", "Convolution & Properties", "Difference Equations", "Block Diagram - Direct Form I & II", "Cascade & Parallel Forms"] },
+                    { title: "Unit 3: z-Transform", topics: ["z-Transform & ROC", "Properties of ROC", "Inverse z-Transform", "Analysis of LTI Systems", "Unilateral z-Transform"] },
+                    { title: "Unit 4: Fourier Analysis", topics: ["DTFS & DTFT", "Properties of DTFT", "Convergence of DTFT", "Fourier Transform for Periodic Signals", "Applications"] },
+                    { title: "Unit 5: State-Space & Sampling", topics: ["State-Space Representation", "State-Transition Matrix", "Sampling Theorem", "Signal Reconstruction", "MIMO Systems"] }
+                ]},
+            "EC-402": { name: "Analog Circuits", icon: "fa-microchip", color: "#8b5cf6", topics: ["BJT/FET", "OP-AMP", "Feedback", "Oscillators"],
+                units: [
+                    { title: "Unit 1: Feedback Amplifiers", topics: ["Concept of Feedback", "Types of Feedback", "Advantages of Negative Feedback", "Feedback Topologies"] },
+                    { title: "Unit 2: Oscillators", topics: ["Barkhausen Criterion", "RC Phase Shift Oscillator", "Wien Bridge Oscillator", "LC Oscillators - Hartley, Colpitt's", "Crystal Oscillator"] },
+                    { title: "Unit 3: Operational Amplifier", topics: ["Differential Amplifier", "Ideal Op-Amp Characteristics", "Op-Amp Parameters", "Block Diagram"] },
+                    { title: "Unit 4: Op-Amp Applications", topics: ["Inverting & Non-Inverting Amplifiers", "Summing Amplifier", "Integrator & Differentiator", "Active Filters", "Waveform Generators"] },
+                    { title: "Unit 5: IC 555 Timer", topics: ["555 Timer Block Diagram", "Astable Multivibrator", "Monostable Multivibrator", "Applications", "Voltage Regulators - LM317"] }
+                ]},
+            "EC-403": { name: "Analog Communication", icon: "fa-broadcast-tower", color: "#f59e0b", topics: ["AM/FM", "Modulation", "Transmitters", "Noise"],
+                units: [
+                    { title: "Unit 1: Frequency Domain", topics: ["Fourier Transform", "Convolution Theorem", "Correlation", "Energy & Power Spectral Density"] },
+                    { title: "Unit 2: Amplitude Modulation", topics: ["DSB-C, DSB-SC, SSB", "AM Generation & Detection", "VSB Modulation", "Modulation Index"] },
+                    { title: "Unit 3: Angle Modulation", topics: ["FM & PM", "Narrowband & Wideband FM", "FM Generation - Direct & Indirect", "FM Detection - PLL", "Pre-emphasis & De-emphasis"] },
+                    { title: "Unit 4: Transmitters & Receivers", topics: ["Super Heterodyne Receiver", "TRF Receiver", "Selectivity & Sensitivity", "AGC, AFC"] },
+                    { title: "Unit 5: Noise Analysis", topics: ["Noise Sources", "Noise Figure & Temperature", "Figure of Merit", "Noise in AM & FM Receivers"] }
+                ]},
+            "EC-404": { name: "Control System", icon: "fa-sliders-h", color: "#ef4444", topics: ["Root Locus", "Bode Plot", "Stability", "PID"],
+                units: [
+                    { title: "Unit 1: Introduction", topics: ["Control System Classification", "Transfer Function", "Block Diagram Reduction", "Signal Flow Graph"] },
+                    { title: "Unit 2: Time Response", topics: ["Standard Test Signals", "1st & 2nd Order Systems", "Steady State Error", "Routh-Hurwitz Criterion"] },
+                    { title: "Unit 3: Root Locus", topics: ["Root Locus Concepts", "Sketching Rules", "Stability Analysis", "Effects of Poles & Zeros"] },
+                    { title: "Unit 4: Frequency Response", topics: ["Bode Plots", "Polar Plots", "Nyquist Stability", "Gain & Phase Margin"] },
+                    { title: "Unit 5: State Space", topics: ["State Space Representation", "Controllability & Observability", "State Transition Matrix", "PID Controllers"] }
+                ]},
+            "EC-405": { name: "Electromagnetic Field Theory", icon: "fa-magnet", color: "#10b981", topics: ["Maxwell's Eq", "Wave Propagation", "Transmission Lines"],
+                units: [
+                    { title: "Unit 1: Electrostatics", topics: ["Coulomb's Law", "Electric Field Intensity", "Gauss's Law", "Electric Potential", "Capacitance"] },
+                    { title: "Unit 2: Magnetostatics", topics: ["Biot-Savart Law", "Ampere's Law", "Magnetic Flux Density", "Inductance", "Magnetic Materials"] },
+                    { title: "Unit 3: Maxwell's Equations", topics: ["Faraday's Law", "Displacement Current", "Maxwell's Equations in Integral & Differential Form", "Boundary Conditions"] },
+                    { title: "Unit 4: Wave Propagation", topics: ["Wave Equation", "Uniform Plane Waves", "Propagation in Free Space & Dielectrics", "Poynting Vector"] },
+                    { title: "Unit 5: Transmission Lines", topics: ["Transmission Line Parameters", "Characteristic Impedance", "Standing Waves", "Smith Chart"] }
+                ]},
+            "EC-406": { name: "Digital Electronics", icon: "fa-digital-tiling", color: "#ec489a", topics: ["Logic Gates", "Flip-Flops", "Counters", "ADC/DAC"],
+                units: [
+                    { title: "Unit 1: Boolean Algebra", topics: ["Logic Gates", "Boolean Theorems", "K-Map Minimization", "Quine-McCluskey Method"] },
+                    { title: "Unit 2: Combinational Circuits", topics: ["Adders & Subtractors", "Multiplexers & Demultiplexers", "Encoders & Decoders", "Comparators"] },
+                    { title: "Unit 3: Sequential Circuits", topics: ["Flip-Flops - SR, JK, D, T", "Registers & Shift Registers", "Counters - Asynchronous & Synchronous"] },
+                    { title: "Unit 4: Memories & Logic Families", topics: ["RAM, ROM, PLA, PAL", "TTL & CMOS Logic Families", "Fan-out, Propagation Delay"] },
+                    { title: "Unit 5: ADC/DAC", topics: ["Digital to Analog Converters", "Analog to Digital Converters", "Successive Approximation", "Dual Slope ADC"] }
+                ]}
+        };
+
+        let currentSubject = null;
+
         function showComingSoon() {
             alert('📚 PYQs are being prepared!\n\nWe are collecting high-quality previous year question papers for all 4th semester subjects.\n\n📅 Expected Release: April 2026\n\nFor urgent queries: gauravkosti911@gmail.com');
         }
 
-        function showSyllabus() {
-            alert('📖 RGPV EC 4th Semester Syllabus Details\n\n' +
-                  '═══════════════════════════════\n\n' +
-                  'EC-401: Signals & Systems\n' +
-                  '• Unit 1: Introduction to Signals & Systems\n' +
-                  '• Unit 2: Fourier Series & Transform\n' +
-                  '• Unit 3: Laplace Transform & Applications\n' +
-                  '• Unit 4: Z-Transform\n' +
-                  '• Unit 5: Sampling & Reconstruction\n\n' +
-                  'EC-402: Analog Circuits\n' +
-                  '• Unit 1: BJT & FET Amplifiers\n' +
-                  '• Unit 2: Multistage & Feedback Amplifiers\n' +
-                  '• Unit 3: Oscillators & Tuned Amplifiers\n' +
-                  '• Unit 4: Operational Amplifiers\n' +
-                  '• Unit 5: Power Amplifiers\n\n' +
-                  'EC-403: Electromagnetic Field Theory\n' +
-                  '• Electrostatics & Magnetostatics\n' +
-                  '• Maxwell\'s Equations & Boundary Conditions\n' +
-                  '• Wave Propagation in Free Space & Dielectrics\n' +
-                  '• Transmission Lines & Waveguides\n\n' +
-                  'EC-404: Digital Electronics\n' +
-                  '• Logic Gates & Boolean Algebra\n' +
-                  '• Combinational Circuits\n' +
-                  '• Sequential Circuits (Flip-flops, Counters)\n' +
-                  '• Registers & Memories\n' +
-                  '• ADC/DAC & Logic Families\n\n' +
-                  'EC-405: Control Systems\n' +
-                  '• Mathematical Modeling\n' +
-                  '• Time Response Analysis\n' +
-                  '• Stability (Routh-Hurwitz, Root Locus)\n' +
-                  '• Frequency Response (Bode, Nyquist)\n' +
-                  '• State Space Analysis\n\n' +
-                  'EC-406: Electrical Machines & Drives\n' +
-                  '• DC Machines & Transformers\n' +
-                  '• Synchronous Machines\n' +
-                  '• Induction Motors\n' +
-                  '• Motor Drives & Speed Control\n\n' +
-                  '📌 For complete syllabus PDF, contact EC Study Hub');
+        function openModal(code) {
+            currentSubject = code;
+            const data = subjects[code];
+            document.getElementById('modalTitle').innerHTML = `${code} : ${data.name}`;
+            let bodyHtml = '';
+            data.units.forEach(unit => {
+                bodyHtml += `
+                    <div class="unit-block">
+                        <div class="unit-title"><i class="fas fa-folder-open"></i> ${unit.title}</div>
+                        <ul class="topic-list">
+                            ${unit.topics.map(t => `<li>${t}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            });
+            document.getElementById('modalBody').innerHTML = bodyHtml;
+            document.getElementById('syllabusModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
+
+        function closeModal() {
+            document.getElementById('syllabusModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = (e) => { if (e.target === document.getElementById('syllabusModal')) closeModal(); };
+
+        // Render Subjects
+        function renderSubjects() {
+            const grid = document.getElementById('subjectsGrid');
+            grid.innerHTML = '';
+            for (const [code, data] of Object.entries(subjects)) {
+                grid.innerHTML += `
+                    <div class="subject-card">
+                        <div class="subject-header">
+                            <span class="subject-code">${code}</span>
+                            <div class="subject-icon" style="background: ${data.color}20;"><i class="fas ${data.icon}" style="color: ${data.color};"></i></div>
+                        </div>
+                        <h3>${data.name}</h3>
+                        <div class="subject-desc">${data.units.length} Units | Complete Syllabus</div>
+                        <div class="subject-topics">${data.topics.map(t => `<span class="topic-tag">${t}</span>`).join('')}</div>
+                        <div class="btn-group">
+                            <button class="btn-syllabus" onclick="openModal('${code}')"><i class="fas fa-eye"></i> Syllabus</button>
+                            <button class="btn-download" onclick="showComingSoon()"><i class="fas fa-download"></i> PYQs</button>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Render Quick Syllabus
+        function renderQuickSyllabus() {
+            const grid = document.getElementById('syllabusQuickGrid');
+            grid.innerHTML = '';
+            const icons = { "EC-401":"fa-chart-line", "EC-402":"fa-microchip", "EC-403":"fa-broadcast-tower", "EC-404":"fa-sliders-h", "EC-405":"fa-magnet", "EC-406":"fa-digital-tiling" };
+            const desc = { "EC-401":"Fourier, Laplace, Z-transform", "EC-402":"Amplifiers, OP-AMP, Oscillators", "EC-403":"AM/FM, Modulation, Receivers", "EC-404":"Root Locus, Bode, Stability", "EC-405":"Maxwell, Wave Propagation", "EC-406":"Gates, Flip-flops, Counters" };
+            for (const [code, data] of Object.entries(subjects)) {
+                grid.innerHTML += `
+                    <div class="syllabus-item" onclick="openModal('${code}')">
+                        <i class="fas ${icons[code]}"></i>
+                        <div><strong>${code} : ${data.name}</strong><p>${desc[code]}</p></div>
+                    </div>
+                `;
+            }
+        }
+
+        renderSubjects();
+        renderQuickSyllabus();
     </script>
 </body>
 </html>
