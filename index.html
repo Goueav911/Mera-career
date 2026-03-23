@@ -6,6 +6,7 @@
     <meta name="google-site-verification" content="AXVuykSHtljhJjAa92L-O7OFaj7XX0_eFdE3WZSjxa8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Aapka saara existing style yahi rahega - kuch change nahi */
         * {
             margin: 0;
             padding: 0;
@@ -400,7 +401,7 @@
         .cta-section h3 { font-size: 28px; margin-bottom: 15px; }
         .cta-section p { color: #9ca3af; margin-bottom: 25px; }
 
-        /* Footer */
+        /* Footer - UPDATED with Contact & Instagram Buttons */
         .footer {
             background: rgba(30, 34, 48, 0.5);
             backdrop-filter: blur(10px);
@@ -419,6 +420,40 @@
         }
         .footer-logo h3 { font-size: 20px; margin-bottom: 5px; }
         .footer-logo p { font-size: 12px; color: #9ca3af; }
+        
+        /* Social & Contact Buttons */
+        .footer-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .contact-btn, .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            border: none;
+        }
+        .contact-btn {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+        }
+        .instagram-btn {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcaf45);
+            color: white;
+        }
+        .contact-btn:hover, .instagram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
         .social-links { display: flex; gap: 15px; }
         .social-links a { color: #9ca3af; font-size: 20px; transition: color 0.3s; }
         .social-links a:hover { color: #3b82f6; }
@@ -439,6 +474,8 @@
             .cta-section { padding: 30px 20px; }
             .footer-content { flex-direction: column; text-align: center; }
             .btn-group { flex-direction: column; }
+            .footer-buttons { flex-direction: column; width: 100%; }
+            .contact-btn, .instagram-btn { justify-content: center; }
         }
 
         .subject-card, .feature-card, .syllabus-item {
@@ -499,15 +536,22 @@
             <button class="btn-download" onclick="showComingSoon()" style="width: auto; padding: 14px 35px;"><i class="fas fa-rocket"></i> Get All PYQs Now</button>
         </div>
 
-        <!-- Footer -->
+        <!-- Footer - UPDATED with Contact & Instagram Buttons -->
         <div class="footer">
             <div class="footer-content">
-                <div class="footer-logo"><h3><i class="fas fa-microchip"></i> EC Study Hub</h3><p>Empowering Electronics Engineers</p></div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="footer-logo">
+                    <h3><i class="fas fa-microchip"></i> EC Study Hub</h3>
+                    <p>Empowering Electronics Engineers</p>
+                </div>
+                <div class="footer-buttons">
+                    <!-- Contact Button - Opens Gmail -->
+                    <button class="contact-btn" onclick="openGmail()">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </button>
+                    <!-- Instagram Button - Opens Instagram Profile -->
+                    <button class="instagram-btn" onclick="openInstagram()">
+                        <i class="fab fa-instagram"></i> Follow on Instagram
+                    </button>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -588,6 +632,16 @@
         function showComingSoon() {
             alert('📚 PYQs are being prepared!\n\nWe are collecting high-quality previous year question papers for all 4th semester subjects.\n\n📅 Expected Release: April 2026\n\nFor urgent queries: gauravkosti911@gmail.com');
         }
+
+        // ========== NEW FUNCTIONS FOR BUTTONS ==========
+        function openGmail() {
+            window.location.href = "mailto:gauravkosti911@gmail.com?subject=Query from EC Study Hub&body=Hello, I have a question regarding...";
+        }
+
+        function openInstagram() {
+            window.open("https://www.instagram.com/im_gourav911?igsh=anI3cnZ4Nmxqamd2", "_blank");
+        }
+        // ===============================================
 
         function openModal(code) {
             currentSubject = code;
